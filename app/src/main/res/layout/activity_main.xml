@@ -30,7 +30,8 @@
                 android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="amount"></EditText>
+                android:hint="amount"
+                android:inputType="numberDecimal"></EditText>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
                 android:id="@+id/pax"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="pax"></EditText>
+                android:hint="pax"
+                android:inputType="numberDecimal"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -86,12 +88,14 @@
                 android:id="@+id/discount"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="discount"></EditText>
+                android:hint="discount"
+                android:inputType="number"></EditText>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pay"
+
                 android:textSize="25dp"></TextView>
         </LinearLayout>
 

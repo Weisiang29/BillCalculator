@@ -51,9 +51,19 @@ public class MainActivity extends AppCompatActivity {
                 String V3=discount.getText().toString();
 
                 double Total = 0;
-                if((V1.isEmpty())||(V2.isEmpty())){
+                if((V1.isEmpty())&&(V2.isEmpty())){
                     Toast.makeText(MainActivity.this,"Please fill all the input area",Toast.LENGTH_SHORT).show();
                 }
+                else if(!V1.isEmpty()&&V2.isEmpty()){
+                    Toast.makeText(MainActivity.this,"Please fill number of pax",Toast.LENGTH_SHORT).show();
+
+                }
+                else if(V1.isEmpty()&&!V2.isEmpty()){
+                    Toast.makeText(MainActivity.this,"Please fill number of Amount",Toast.LENGTH_SHORT).show();
+
+
+                }
+
                 else{
                     double int1=Double.parseDouble(V1);
                     int int2=Integer.parseInt(V2);
@@ -85,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                         String neweachpay2   = String.format("Each Pays: $ %.2f via Paynow to 90127584",(Total/int2));
                         totalBill.setText(newtotal2);
                         eachPays.setText(neweachpay2);
+
+
                     }
 
                 }
@@ -100,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
                     discount.setText("");
                     svs.setChecked(false);
                     gst.setChecked(false);
+                    totalBill.setText("Total Bill:");
+                    eachPays.setText("Each Pays:");
                 }
             });
 
